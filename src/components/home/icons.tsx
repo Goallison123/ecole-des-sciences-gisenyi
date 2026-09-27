@@ -41,7 +41,10 @@ export function CircleIcon({
         className,
       )}
     >
-      <Icon className={cn("h-8 w-8", iconClassName)} strokeWidth={1.5} />
+      <Icon
+        className={cn("h-8 w-8", iconClassName)}
+        strokeWidth={1.5}
+      />
     </span>
   );
 }

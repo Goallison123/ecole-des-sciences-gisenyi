@@ -300,9 +300,12 @@ export function gateIdentitySessions() {
                 result.data.session.token,
               );
               if (!sessionValue) {
-                console.error(`${LOG} session created in DB but cookie was not emitted`, {
-                  userId: result.data.user.id,
-                });
+                console.error(
+                  `${LOG} session created in DB but cookie was not emitted`,
+                  {
+                    userId: result.data.user.id,
+                  },
+                );
                 return;
               }
 

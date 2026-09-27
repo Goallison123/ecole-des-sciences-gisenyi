@@ -15,15 +15,13 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Gisenyi School of Sciences — a school of excellence in Gisenyi, Rwanda, from preschool to the baccalaureate.",
+          "Gisenyi School of Sciences — a school of excellence in Gisenyi, Rwanda, offering O’Level and A Level education.",
       },
       { name: "theme-color", content: "#0c5c4a" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com" },
       {
@@ -37,7 +35,11 @@ export const Route = createRootRoute({
 
 function RootDocument() {
   return (
-    <html lang="en" className="antialiased" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="antialiased"
+      suppressHydrationWarning
+    >
       <head>
         <HeadContent />
       </head>

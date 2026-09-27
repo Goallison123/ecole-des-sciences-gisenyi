@@ -51,7 +51,8 @@ export function gateKeyResolver(
   jwksFetch: JwksFetch = defaultJwksFetch,
 ): JWTVerifyGetKey {
   return async (protectedHeader) => {
-    const kid = typeof protectedHeader.kid === "string" ? protectedHeader.kid : undefined;
+    const kid =
+      typeof protectedHeader.kid === "string" ? protectedHeader.kid : undefined;
     const findKey = (jwks: GateJwks): JWK | undefined =>
       jwks.keys.find(
         (k) => k.kty === "OKP" && k.crv === "Ed25519" && (!kid || k.kid === kid),

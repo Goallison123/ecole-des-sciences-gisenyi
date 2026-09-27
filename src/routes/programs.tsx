@@ -8,25 +8,22 @@ import { programs, school } from "@/lib/site";
 export const Route = createFileRoute("/programs")({
   component: ProgramsPage,
   head: () => ({
-    meta: [{ title: `Programs · ${school.name}` }],
+    meta: [{ title: `Levels · ${school.name}` }],
   }),
 });
 
 const images: Record<string, string> = {
-  preschool: "/images/preschool.jpg",
-  primary: "/images/library.jpg",
-  middle: "/images/lab.jpg",
-  high: "/images/campus.jpg",
-  baccalaureate: "/images/library.jpg",
+  "o-level": "/images/campus.svg",
+  "a-level": "/images/lab.svg",
 };
 
 function ProgramsPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Our programs"
-        title="From preschool to the baccalaureate"
-        description="A complete path, adapted to every stage of school life — with science, languages, and character held to the same standard."
+        eyebrow="Our levels"
+        title="O’Level and A Level"
+        description="École des Sciences de Gisenyi focuses on the two secondary-school levels: a strong ordinary-level foundation followed by advanced study."
       />
 
       <section className="px-5 pb-8 md:px-8">
@@ -92,15 +89,18 @@ function ProgramsPage() {
         <div className="mx-auto max-w-5xl rounded-cta bg-mint px-6 py-14 text-center md:px-16">
           <Eyebrow>Admissions</Eyebrow>
           <h2 className="mt-4 font-display text-3xl font-semibold text-ink">
-            Find the right year for your child
+            Find the right level for your student
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-muted">
-            Write to us with the year of entry you have in mind. We will guide you through
-            visits, assessments, and the first day of school.
+            Find out about NESA allocation and applications for students transferring
+            from another school.
           </p>
-          <Button asChild className="mt-8">
-            <Link to="/contact">
-              Start an application
+          <Button
+            asChild
+            className="mt-8"
+          >
+            <Link to="/students">
+              View student procedures
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>

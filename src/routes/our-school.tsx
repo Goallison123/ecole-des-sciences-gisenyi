@@ -18,13 +18,13 @@ function OurSchoolPage() {
       <PageHero
         eyebrow="Our school"
         title="A house of science on the shores of Lake Kivu"
-        description="École des Sciences de Gisenyi is a complete school of excellence — from the first years of preschool to the baccalaureate — rooted in Gisenyi and open to the world."
+        description="École des Sciences de Gisenyi is a school of excellence rooted in Gisenyi and focused on O’Level and A Level education."
       />
 
       <section className="px-5 pb-16 md:px-8 md:pb-24">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2 lg:items-center">
           <img
-            src="/images/campus.jpg"
+            src="/images/campus.svg"
             alt="Campus buildings and gardens of École des Sciences de Gisenyi"
             className="h-full min-h-72 w-full rounded-xl object-cover shadow-soft"
           />
@@ -41,13 +41,13 @@ function OurSchoolPage() {
               </p>
               <p>
                 We teach as a community: teachers who know their students, families who
-                are partners, and a campus designed for attention — laboratories, gardens,
-                a library, and quiet rooms for work.
+                are partners, and a campus designed for attention — laboratories,
+                gardens, a library, and quiet rooms for work.
               </p>
               <p>
                 Our motto is a daily instruction. To know is not enough. To innovate
-                without character is not enough. We form students who will build tomorrow
-                with both competence and care.
+                without character is not enough. We form students who will build
+                tomorrow with both competence and care.
               </p>
             </div>
           </div>
@@ -78,7 +78,8 @@ function OurSchoolPage() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
             We cultivate excellence, respect, innovation, and engagement so that every
-            student can think clearly, act honourably, and serve the place they come from.
+            student can think clearly, act honourably, and serve the place they come
+            from.
           </p>
         </div>
         <ul className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -135,10 +136,13 @@ function OurSchoolPage() {
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted">
               The campus sits above Gisenyi with rooms for science, a library that stays
-              quiet, courtyards for sport, and gardens used as outdoor classrooms. It is a
-              place designed for attention — and for belonging.
+              quiet, courtyards for sport, and gardens used as outdoor classrooms. It is
+              a place designed for attention — and for belonging.
             </p>
-            <Button asChild className="mt-8">
+            <Button
+              asChild
+              className="mt-8"
+            >
               <Link to="/contact">
                 Visit the school
                 <ArrowRight className="h-4 w-4" />
@@ -146,7 +150,7 @@ function OurSchoolPage() {
             </Button>
           </div>
           <img
-            src="/images/library.jpg"
+            src="/images/library.svg"
             alt="The school library with wooden shelves and reading tables"
             className="w-full rounded-xl object-cover shadow-soft"
           />

@@ -16,16 +16,38 @@ export const school = {
 export const navLeft = [
   { to: "/", label: "Home" },
   { to: "/our-school", label: "Our school" },
-  { to: "/programs", label: "Programs" },
+  { to: "/students", label: "Students" },
 ] as const;
 
 export const navRight = [
+  { to: "/academics", label: "Academics" },
+  { to: "/programs", label: "Levels" },
   { to: "/school-life", label: "School life" },
-  { to: "/news", label: "News" },
+  { to: "/conduct", label: "Conduct" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
 export const navAll = [...navLeft, ...navRight];
+
+export const navMenus = {
+  academics: [
+    { to: "/academic-calendar", label: "Academic calendar" },
+    { to: "/library", label: "Library" },
+    { to: "/ict-rooms", label: "ICT rooms" },
+    { to: "/self-study", label: "Self-study (étude)" },
+  ],
+  levels: [
+    { to: "/o-level", label: "O’Level" },
+    { to: "/a-level", label: "A Level" },
+  ],
+  schoolLife: [
+    { to: "/school-life", label: "Overview" },
+    { to: "/gallery", label: "Gallery" },
+    { to: "/dormitory", label: "Dormitory" },
+    { to: "/parent-visits", label: "Parent visits" },
+    { to: "/news", label: "News" },
+  ],
+} as const;
 
 export const social = [
   { name: "Facebook", href: "https://www.facebook.com" },
@@ -63,83 +85,35 @@ export const values = [
 
 export const programs = [
   {
-    id: "preschool",
-    title: "Preschool",
-    summary: "Spark curiosity, lay the foundations.",
-    icon: "sprout",
-    ages: "Ages 3–6",
-    duration: "3 years",
-    intro:
-      "A gentle first step into school life, where play, language, and discovery sit at the heart of every day.",
-    points: [
-      "Play-based learning that builds language, motor skills, and confidence",
-      "Small classes with attentive teachers and a bilingual environment",
-      "Gardens, stories, music, and first encounters with numbers and nature",
-      "A safe, welcoming setting that prepares children for primary school",
-    ],
-  },
-  {
-    id: "primary",
-    title: "Primary",
-    summary: "Build the foundations.",
+    id: "o-level",
+    title: "O’Level",
+    summary: "Build strong foundations in science and learning.",
     icon: "book",
-    ages: "Ages 6–12",
-    duration: "6 years",
+    ages: "Lower secondary",
+    duration: "Ordinary level",
     intro:
-      "Solid foundations in literacy, numeracy, science, and character — so every child can think clearly and care deeply.",
+      "O’Level at ESG builds confident, curious learners through a broad foundation in sciences, mathematics, languages, and responsible citizenship.",
     points: [
-      "A rigorous core in reading, writing, mathematics, and the sciences",
-      "Inquiry projects that connect classroom learning to the world around Gisenyi",
-      "Arts, sport, and civic education alongside academic work",
-      "Close follow-up so no talent is left unseen",
+      "A balanced grounding in mathematics, sciences, languages, and humanities",
+      "Practical learning, study habits, and guided preparation for national assessment",
+      "Clubs and student activities that build confidence and collaboration",
+      "Individual guidance as learners prepare for their next academic stage",
     ],
   },
   {
-    id: "middle",
-    title: "Middle school",
-    summary: "Deepen knowledge.",
+    id: "a-level",
+    title: "A Level",
+    summary: "Specialise, investigate, and prepare for what comes next.",
     icon: "flask",
-    ages: "Ages 12–15",
-    duration: "3 years",
+    ages: "Upper secondary",
+    duration: "Advanced level",
     intro:
-      "The collège years stretch curiosity into method: students learn to analyse, experiment, and work with growing independence.",
+      "A Level offers focused subject combinations and deeper scientific study, supported by practical work, independent learning, and academic mentorship.",
     points: [
-      "Strengthened sciences, mathematics, and languages",
-      "Laboratory work, research habits, and structured debate",
-      "Guidance as interests begin to take shape",
-      "A culture of respect, effort, and intellectual honesty",
-    ],
-  },
-  {
-    id: "high",
-    title: "High school",
-    summary: "Prepare for the future, open new horizons.",
-    icon: "file",
-    ages: "Ages 15–18",
-    duration: "3 years",
-    intro:
-      "Lycée at ESG is ambitious and outward-looking: students prepare for the baccalaureate while discovering the paths that await them.",
-    points: [
-      "Specialised tracks with a strong science core",
-      "University counselling, research projects, and public speaking",
-      "Partnerships, visits, and a culture of intellectual excellence",
-      "Leadership through service, clubs, and student voice",
-    ],
-  },
-  {
-    id: "baccalaureate",
-    title: "Baccalaureate",
-    summary: "Towards excellence and success.",
-    icon: "star",
-    ages: "Final year",
-    duration: "Examination year",
-    intro:
-      "The baccalaureate is both a destination and a beginning. We prepare students to sit it with confidence — and to walk beyond it with purpose.",
-    points: [
-      "Intensive preparation, past papers, and individual mentoring",
-      "Orientation towards universities in Rwanda and abroad",
-      "A final-year culture of rigour, calm, and mutual support",
-      "Alumni network and ongoing guidance after results",
+      "Subject combinations aligned with Rwanda’s upper-secondary curriculum",
+      "Laboratory investigations, research habits, and structured discussion",
+      "Academic mentoring and independent study routines",
+      "Preparation for national examinations and future study pathways",
     ],
   },
 ] as const;
@@ -153,7 +127,7 @@ export const leadership = [
   {
     name: "Jean-Baptiste Hakizimana",
     role: "Director of Studies",
-    bio: "Oversees curriculum from preschool to the baccalaureate, with a focus on scientific method and languages.",
+    bio: "Oversees the O’Level and A Level curriculum, with a focus on scientific method and languages.",
   },
   {
     name: "Aline Mukamana",

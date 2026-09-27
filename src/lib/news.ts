@@ -16,7 +16,7 @@ export const articles: Article[] = [
       "From water quality on Lake Kivu to low-cost sensors, this year’s fair showed what patient inquiry can become.",
     date: "2026-09-12",
     category: "Science",
-    image: "/images/lab.jpg",
+    image: "/images/lab.svg",
     paragraphs: [
       "The courtyard and laboratories filled with posters, prototypes, and quiet conversations this month as École des Sciences de Gisenyi held its annual Science Fair. Families, teachers, and visiting researchers from Rubavu moved from stand to stand as students explained months of work.",
       "Projects ranged from a study of shoreline water quality on Lake Kivu to a low-cost soil sensor designed for school gardens. Several teams worked in Kinyarwanda, French, and English — a reminder that scientific clarity and linguistic care belong together.",
@@ -31,12 +31,12 @@ export const articles: Article[] = [
       "Twelve teaching labs now serve the school, with benches, fume hoods, and light designed for serious practical work.",
     date: "2026-08-28",
     category: "Campus",
-    image: "/images/lab.jpg",
+    image: "/images/lab.svg",
     paragraphs: [
       "The school has opened two new laboratories dedicated to chemistry and the life sciences, completing a campus plan that now counts twelve teaching labs.",
-      "Benches, storage, and fume hoods were specified for safety and for the kind of practical work the baccalaureate demands. Large windows look onto the gardens, so experiment and landscape sit in the same frame.",
+      "Benches, storage, and fume hoods were specified for safety and for advanced practical science work. Large windows look onto the gardens, so experiment and landscape sit in the same frame.",
       "Dr. Clarisse Uwase, Head of School, described the rooms as “a promise to our students that science at ESG is something you do with your hands, not only something you read.”",
-      "First practical sessions began with middle-school classes in the week after opening. High-school research groups will use the spaces in the evenings for long-form projects.",
+      "First practical sessions began with O’Level classes in the week after opening. A Level research groups will use the spaces in the evenings for long-form projects.",
     ],
   },
   {
@@ -46,7 +46,7 @@ export const articles: Article[] = [
       "Lycée students spent five days reading the landscape they live beside — shoreline, hills, and the science of the lake.",
     date: "2026-07-03",
     category: "School life",
-    image: "/images/lake.jpg",
+    image: "/images/lake.svg",
     paragraphs: [
       "Gisenyi is not a backdrop. For one week in July, lycée students treated Lake Kivu as a classroom: shoreline transects, simple water measures, sketches of volcanic hills, and conversations with local fishermen and park staff.",
       "The week mixed earth sciences, ecology, and civics. Students kept field notebooks and returned with questions about methane, biodiversity, and the duties of a school that sits on this water.",
@@ -55,15 +55,15 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "baccalaureate-results",
-    title: "Baccalaureate 2026: a year of strong results and wide doors",
+    slug: "a-level-results",
+    title: "A Level 2026: a year of strong results and wide doors",
     excerpt:
       "Graduates move on to universities in Rwanda and abroad, carrying the school’s demand for rigour and character.",
     date: "2026-06-18",
     category: "Academics",
-    image: "/images/library.jpg",
+    image: "/images/library.svg",
     paragraphs: [
-      "The class of 2026 received its baccalaureate results in June, with a pass rate that continues the school’s record of academic seriousness and a spread of distinctions across scientific tracks.",
+      "The class of 2026 received its A Level results in June, with a pass rate that continues the school’s record of academic seriousness and a spread of distinctions across scientific tracks.",
       "Offers have arrived from universities in Rwanda, East Africa, and further afield. Counselling continues through the summer for students still weighing paths in medicine, engineering, research, and the humanities.",
       "At a quiet gathering in the courtyard, the Head of School thanked families and teachers “for a long companionship — excellence is never the work of a single year.”",
       "Alumni from earlier cohorts returned to speak with the new graduates, a tradition the school intends to keep.",

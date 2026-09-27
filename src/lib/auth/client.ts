@@ -1,6 +1,6 @@
 import { genericOAuthClient } from "better-auth/client/plugins";
 import { createAuthClient } from "better-auth/react";
-import { runPreSignInSignOut, runSignOut } from "../../../scripts/sign-out-plan.mjs";
+import { runPreSignInSignOut, runSignOut } from "./sign-out-plan";
 import { GROK_PROVIDERS } from "./providers";
 
 /**

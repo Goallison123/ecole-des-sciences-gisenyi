@@ -143,7 +143,11 @@ export class P2PRoom {
     void fetch("/api/rtc", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ op: "leave", room: this.opts.room, peer: this.opts.selfId }),
+      body: JSON.stringify({
+        op: "leave",
+        room: this.opts.room,
+        peer: this.opts.selfId,
+      }),
       keepalive: true,
     }).catch(() => {});
   }

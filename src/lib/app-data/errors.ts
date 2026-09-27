@@ -40,7 +40,9 @@ function matchMessageRule(raw: string): MessageRule | undefined {
   );
 }
 
-export function classifyCallToolError(result: CallToolResult): CallToolErrorState | null {
+export function classifyCallToolError(
+  result: CallToolResult,
+): CallToolErrorState | null {
   if (result.ok) return null;
   const detail = result.errorMessage || undefined;
   const raw = (result.errorMessage ?? "").toLowerCase();

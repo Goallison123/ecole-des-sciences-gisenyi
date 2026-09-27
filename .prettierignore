@@ -1,0 +1,10 @@
+# TanStack Router output; regenerated from src/routes.
+src/routeTree.gen.ts
+
+# Build and generated application metadata.
+.tanstack/
+.vercel/
+node_modules/
+
+# Generated binary deliverables.
+public/**/*.pdf

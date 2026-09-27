@@ -51,15 +51,51 @@ function SchoolLifePage() {
       <section className="px-5 pb-16 md:px-8 md:pb-24">
         <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2">
           <img
-            src="/images/courtyard.jpg"
+            src="/images/courtyard.svg"
             alt="Courtyard and sports court on the school campus"
             className="h-72 w-full rounded-xl object-cover shadow-soft md:h-full"
           />
           <img
-            src="/images/lake.jpg"
+            src="/images/lake.svg"
             alt="Lake Kivu near Gisenyi, where field weeks take place"
             className="h-72 w-full rounded-xl object-cover shadow-soft"
           />
+        </div>
+      </section>
+
+      <section className="px-5 pb-16 md:px-8 md:pb-20">
+        <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-3">
+          {[
+            {
+              to: "/gallery",
+              title: "Gallery",
+              text: "See moments from learning, activities, and campus life.",
+            },
+            {
+              to: "/dormitory",
+              title: "Dormitory",
+              text: "Learn about boarding routines and preparing for residential life.",
+            },
+            {
+              to: "/parent-visits",
+              title: "Parent visits",
+              text: "Find out how to arrange a family visit or meeting.",
+            },
+          ].map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="rounded-xl border border-border bg-surface p-6 shadow-card transition-colors hover:border-primary"
+            >
+              <h2 className="font-display text-xl font-semibold text-ink">
+                {item.title}
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{item.text}</p>
+              <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                Explore <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -97,7 +133,11 @@ function SchoolLifePage() {
               children have more play and movement; lycée students receive longer blocks
               for laboratory and research.
             </p>
-            <Button asChild className="mt-8" variant="outline">
+            <Button
+              asChild
+              className="mt-8"
+              variant="outline"
+            >
               <Link to="/news">
                 See school news
                 <ArrowRight className="h-4 w-4" />
@@ -106,7 +146,10 @@ function SchoolLifePage() {
           </div>
           <ol className="space-y-0 divide-y divide-border rounded-xl border border-border bg-surface">
             {days.map((slot) => (
-              <li key={slot.time} className="grid grid-cols-[5.5rem_1fr] gap-4 px-5 py-5">
+              <li
+                key={slot.time}
+                className="grid grid-cols-[5.5rem_1fr] gap-4 px-5 py-5"
+              >
                 <p className="font-medium tabular-nums text-accent">{slot.time}</p>
                 <div>
                   <h3 className="font-sans text-sm font-semibold text-ink">
@@ -123,8 +166,8 @@ function SchoolLifePage() {
       <section className="bg-mint/60 px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-2">
           <img
-            src="/images/preschool.jpg"
-            alt="A preschool classroom prepared for the day's work"
+            src="/images/campus.svg"
+            alt="A learning space on the school campus"
             className="w-full rounded-xl object-cover shadow-soft"
           />
           <div>
@@ -134,10 +177,13 @@ function SchoolLifePage() {
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted">
               Tutors follow a small group through the year. We notice effort, not only
-              results; we intervene early when a student is struggling; we celebrate work
-              that is honest. Parents are partners — not spectators.
+              results; we intervene early when a student is struggling; we celebrate
+              work that is honest. Parents are partners — not spectators.
             </p>
-            <Button asChild className="mt-8">
+            <Button
+              asChild
+              className="mt-8"
+            >
               <Link to="/contact">
                 Speak with the school
                 <ArrowRight className="h-4 w-4" />

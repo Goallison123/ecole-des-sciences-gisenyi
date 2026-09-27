@@ -4,7 +4,10 @@ import { resolveSignInGateState } from "./sign-in-gate.ts";
 
 describe("resolveSignInGateState", () => {
   it("is pending while the session check is in flight, user or not", () => {
-    assert.equal(resolveSignInGateState({ isPending: true, hasUser: false }), "pending");
+    assert.equal(
+      resolveSignInGateState({ isPending: true, hasUser: false }),
+      "pending",
+    );
     assert.equal(resolveSignInGateState({ isPending: true, hasUser: true }), "pending");
   });
 

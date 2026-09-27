@@ -19,14 +19,17 @@ function PrivacyPage() {
       />
       <article className="mx-auto max-w-3xl space-y-6 px-5 pb-20 text-base leading-relaxed text-muted md:px-8 md:pb-28">
         <p>
-          École des Sciences de Gisenyi collects only what is needed to answer you and to
-          administer school life. We do not sell personal data.
+          École des Sciences de Gisenyi collects only what is needed to answer you and
+          to administer school life. We do not sell personal data.
         </p>
-        <h2 className="font-display text-2xl font-semibold text-ink">What we collect</h2>
+        <h2 className="font-display text-2xl font-semibold text-ink">
+          What we collect
+        </h2>
         <p>
           The contact form asks for your name, email, optional phone number, your
-          relationship to the school, a subject, and a message. These details are used to
-          reply to your enquiry and, where relevant, to open an admissions conversation.
+          relationship to the school, a subject, and a message. These details are used
+          to reply to your enquiry and, where relevant, to open an admissions
+          conversation.
         </p>
         <h2 className="font-display text-2xl font-semibold text-ink">
           How long we keep it
@@ -39,8 +42,8 @@ function PrivacyPage() {
         <h2 className="font-display text-2xl font-semibold text-ink">Your rights</h2>
         <p>
           You may ask to access, correct, or delete personal information we hold about
-          you, subject to legal duties that require us to keep certain education records.
-          Write to {school.email}.
+          you, subject to legal duties that require us to keep certain education
+          records. Write to {school.email}.
         </p>
         <h2 className="font-display text-2xl font-semibold text-ink">Children</h2>
         <p>

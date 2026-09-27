@@ -10,13 +10,25 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ALevelRouteImport } from './routes/a-level'
+import { Route as AcademicCalendarRouteImport } from './routes/academic-calendar'
+import { Route as AcademicsRouteImport } from './routes/academics'
+import { Route as ConductRouteImport } from './routes/conduct'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DormitoryRouteImport } from './routes/dormitory'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as IctRoomsRouteImport } from './routes/ict-rooms'
 import { Route as LegalRouteImport } from './routes/legal'
+import { Route as LibraryRouteImport } from './routes/library'
 import { Route as NewsRouteImport } from './routes/news'
+import { Route as OLevelRouteImport } from './routes/o-level'
 import { Route as OurSchoolRouteImport } from './routes/our-school'
+import { Route as ParentVisitsRouteImport } from './routes/parent-visits'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as SchoolLifeRouteImport } from './routes/school-life'
+import { Route as SelfStudyRouteImport } from './routes/self-study'
+import { Route as StudentsRouteImport } from './routes/students'
 import { Route as NewsSlugRouteImport } from './routes/news.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -24,9 +36,44 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ALevelRoute = ALevelRouteImport.update({
+  id: '/a-level',
+  path: '/a-level',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademicCalendarRoute = AcademicCalendarRouteImport.update({
+  id: '/academic-calendar',
+  path: '/academic-calendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademicsRoute = AcademicsRouteImport.update({
+  id: '/academics',
+  path: '/academics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConductRoute = ConductRouteImport.update({
+  id: '/conduct',
+  path: '/conduct',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DormitoryRoute = DormitoryRouteImport.update({
+  id: '/dormitory',
+  path: '/dormitory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IctRoomsRoute = IctRoomsRouteImport.update({
+  id: '/ict-rooms',
+  path: '/ict-rooms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LegalRoute = LegalRouteImport.update({
@@ -34,14 +81,29 @@ const LegalRoute = LegalRouteImport.update({
   path: '/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LibraryRoute = LibraryRouteImport.update({
+  id: '/library',
+  path: '/library',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NewsRoute = NewsRouteImport.update({
   id: '/news',
   path: '/news',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OLevelRoute = OLevelRouteImport.update({
+  id: '/o-level',
+  path: '/o-level',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OurSchoolRoute = OurSchoolRouteImport.update({
   id: '/our-school',
   path: '/our-school',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParentVisitsRoute = ParentVisitsRouteImport.update({
+  id: '/parent-visits',
+  path: '/parent-visits',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -59,6 +121,16 @@ const SchoolLifeRoute = SchoolLifeRouteImport.update({
   path: '/school-life',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SelfStudyRoute = SelfStudyRouteImport.update({
+  id: '/self-study',
+  path: '/self-study',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentsRoute = StudentsRouteImport.update({
+  id: '/students',
+  path: '/students',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NewsSlugRoute = NewsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -67,83 +139,167 @@ const NewsSlugRoute = NewsSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-level': typeof ALevelRoute
+  '/academic-calendar': typeof AcademicCalendarRoute
+  '/academics': typeof AcademicsRoute
+  '/conduct': typeof ConductRoute
   '/contact': typeof ContactRoute
+  '/dormitory': typeof DormitoryRoute
+  '/gallery': typeof GalleryRoute
+  '/ict-rooms': typeof IctRoomsRoute
   '/legal': typeof LegalRoute
+  '/library': typeof LibraryRoute
   '/news': typeof NewsRouteWithChildren
+  '/o-level': typeof OLevelRoute
   '/our-school': typeof OurSchoolRoute
+  '/parent-visits': typeof ParentVisitsRoute
   '/privacy': typeof PrivacyRoute
   '/programs': typeof ProgramsRoute
   '/school-life': typeof SchoolLifeRoute
+  '/self-study': typeof SelfStudyRoute
+  '/students': typeof StudentsRoute
   '/news/$slug': typeof NewsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-level': typeof ALevelRoute
+  '/academic-calendar': typeof AcademicCalendarRoute
+  '/academics': typeof AcademicsRoute
+  '/conduct': typeof ConductRoute
   '/contact': typeof ContactRoute
+  '/dormitory': typeof DormitoryRoute
+  '/gallery': typeof GalleryRoute
+  '/ict-rooms': typeof IctRoomsRoute
   '/legal': typeof LegalRoute
+  '/library': typeof LibraryRoute
   '/news': typeof NewsRouteWithChildren
+  '/o-level': typeof OLevelRoute
   '/our-school': typeof OurSchoolRoute
+  '/parent-visits': typeof ParentVisitsRoute
   '/privacy': typeof PrivacyRoute
   '/programs': typeof ProgramsRoute
   '/school-life': typeof SchoolLifeRoute
+  '/self-study': typeof SelfStudyRoute
+  '/students': typeof StudentsRoute
   '/news/$slug': typeof NewsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-level': typeof ALevelRoute
+  '/academic-calendar': typeof AcademicCalendarRoute
+  '/academics': typeof AcademicsRoute
+  '/conduct': typeof ConductRoute
   '/contact': typeof ContactRoute
+  '/dormitory': typeof DormitoryRoute
+  '/gallery': typeof GalleryRoute
+  '/ict-rooms': typeof IctRoomsRoute
   '/legal': typeof LegalRoute
+  '/library': typeof LibraryRoute
   '/news': typeof NewsRouteWithChildren
+  '/o-level': typeof OLevelRoute
   '/our-school': typeof OurSchoolRoute
+  '/parent-visits': typeof ParentVisitsRoute
   '/privacy': typeof PrivacyRoute
   '/programs': typeof ProgramsRoute
   '/school-life': typeof SchoolLifeRoute
+  '/self-study': typeof SelfStudyRoute
+  '/students': typeof StudentsRoute
   '/news/$slug': typeof NewsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/a-level'
+    | '/academic-calendar'
+    | '/academics'
+    | '/conduct'
     | '/contact'
+    | '/dormitory'
+    | '/gallery'
+    | '/ict-rooms'
     | '/legal'
+    | '/library'
     | '/news'
+    | '/o-level'
     | '/our-school'
+    | '/parent-visits'
     | '/privacy'
     | '/programs'
     | '/school-life'
+    | '/self-study'
+    | '/students'
     | '/news/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/a-level'
+    | '/academic-calendar'
+    | '/academics'
+    | '/conduct'
     | '/contact'
+    | '/dormitory'
+    | '/gallery'
+    | '/ict-rooms'
     | '/legal'
+    | '/library'
     | '/news'
+    | '/o-level'
     | '/our-school'
+    | '/parent-visits'
     | '/privacy'
     | '/programs'
     | '/school-life'
+    | '/self-study'
+    | '/students'
     | '/news/$slug'
   id:
     | '__root__'
     | '/'
+    | '/a-level'
+    | '/academic-calendar'
+    | '/academics'
+    | '/conduct'
     | '/contact'
+    | '/dormitory'
+    | '/gallery'
+    | '/ict-rooms'
     | '/legal'
+    | '/library'
     | '/news'
+    | '/o-level'
     | '/our-school'
+    | '/parent-visits'
     | '/privacy'
     | '/programs'
     | '/school-life'
+    | '/self-study'
+    | '/students'
     | '/news/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ALevelRoute: typeof ALevelRoute
+  AcademicCalendarRoute: typeof AcademicCalendarRoute
+  AcademicsRoute: typeof AcademicsRoute
+  ConductRoute: typeof ConductRoute
   ContactRoute: typeof ContactRoute
+  DormitoryRoute: typeof DormitoryRoute
+  GalleryRoute: typeof GalleryRoute
+  IctRoomsRoute: typeof IctRoomsRoute
   LegalRoute: typeof LegalRoute
+  LibraryRoute: typeof LibraryRoute
   NewsRoute: typeof NewsRouteWithChildren
+  OLevelRoute: typeof OLevelRoute
   OurSchoolRoute: typeof OurSchoolRoute
+  ParentVisitsRoute: typeof ParentVisitsRoute
   PrivacyRoute: typeof PrivacyRoute
   ProgramsRoute: typeof ProgramsRoute
   SchoolLifeRoute: typeof SchoolLifeRoute
+  SelfStudyRoute: typeof SelfStudyRoute
+  StudentsRoute: typeof StudentsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -155,11 +311,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/a-level': {
+      id: '/a-level'
+      path: '/a-level'
+      fullPath: '/a-level'
+      preLoaderRoute: typeof ALevelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academic-calendar': {
+      id: '/academic-calendar'
+      path: '/academic-calendar'
+      fullPath: '/academic-calendar'
+      preLoaderRoute: typeof AcademicCalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academics': {
+      id: '/academics'
+      path: '/academics'
+      fullPath: '/academics'
+      preLoaderRoute: typeof AcademicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conduct': {
+      id: '/conduct'
+      path: '/conduct'
+      fullPath: '/conduct'
+      preLoaderRoute: typeof ConductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dormitory': {
+      id: '/dormitory'
+      path: '/dormitory'
+      fullPath: '/dormitory'
+      preLoaderRoute: typeof DormitoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ict-rooms': {
+      id: '/ict-rooms'
+      path: '/ict-rooms'
+      fullPath: '/ict-rooms'
+      preLoaderRoute: typeof IctRoomsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/legal': {
@@ -169,6 +374,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LegalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/library': {
+      id: '/library'
+      path: '/library'
+      fullPath: '/library'
+      preLoaderRoute: typeof LibraryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/news': {
       id: '/news'
       path: '/news'
@@ -176,11 +388,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/o-level': {
+      id: '/o-level'
+      path: '/o-level'
+      fullPath: '/o-level'
+      preLoaderRoute: typeof OLevelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/our-school': {
       id: '/our-school'
       path: '/our-school'
       fullPath: '/our-school'
       preLoaderRoute: typeof OurSchoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parent-visits': {
+      id: '/parent-visits'
+      path: '/parent-visits'
+      fullPath: '/parent-visits'
+      preLoaderRoute: typeof ParentVisitsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -202,6 +428,20 @@ declare module '@tanstack/react-router' {
       path: '/school-life'
       fullPath: '/school-life'
       preLoaderRoute: typeof SchoolLifeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/self-study': {
+      id: '/self-study'
+      path: '/self-study'
+      fullPath: '/self-study'
+      preLoaderRoute: typeof SelfStudyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/students': {
+      id: '/students'
+      path: '/students'
+      fullPath: '/students'
+      preLoaderRoute: typeof StudentsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/news/$slug': {
@@ -226,13 +466,25 @@ const NewsRouteWithChildren = NewsRoute._addFileChildren(NewsRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ALevelRoute: ALevelRoute,
+  AcademicCalendarRoute: AcademicCalendarRoute,
+  AcademicsRoute: AcademicsRoute,
+  ConductRoute: ConductRoute,
   ContactRoute: ContactRoute,
+  DormitoryRoute: DormitoryRoute,
+  GalleryRoute: GalleryRoute,
+  IctRoomsRoute: IctRoomsRoute,
   LegalRoute: LegalRoute,
+  LibraryRoute: LibraryRoute,
   NewsRoute: NewsRouteWithChildren,
+  OLevelRoute: OLevelRoute,
   OurSchoolRoute: OurSchoolRoute,
+  ParentVisitsRoute: ParentVisitsRoute,
   PrivacyRoute: PrivacyRoute,
   ProgramsRoute: ProgramsRoute,
   SchoolLifeRoute: SchoolLifeRoute,
+  SelfStudyRoute: SelfStudyRoute,
+  StudentsRoute: StudentsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

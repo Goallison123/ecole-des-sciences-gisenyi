@@ -3,7 +3,10 @@ import { cn } from "@/lib/utils";
 
 function Label({ className, ...props }: LabelHTMLAttributes<HTMLLabelElement>) {
   return (
-    <label className={cn("text-sm font-medium text-foreground", className)} {...props} />
+    <label
+      className={cn("text-sm font-medium text-foreground", className)}
+      {...props}
+    />
   );
 }
 

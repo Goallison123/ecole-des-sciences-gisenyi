@@ -12,7 +12,7 @@ function Home() {
     <main>
       <Hero />
       <Values />
-      <Programs />
+      <Levels />
       <JoinCta />
     </main>
   );
@@ -47,8 +47,11 @@ function Hero() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
-          <Button asChild variant="outline">
-            <Link to="/programs">Our programs</Link>
+          <Button
+            asChild
+            variant="outline"
+          >
+            <Link to="/programs">Our levels</Link>
           </Button>
         </div>
         <a
@@ -59,7 +62,10 @@ function Hero() {
           <span className="relative flex h-9 w-6 items-start justify-center rounded-pill border-2 border-accent/70 pt-1.5">
             <span className="mouse-wheel h-1.5 w-1 rounded-pill bg-accent" />
           </span>
-          <ChevronDown className="h-4 w-4" strokeWidth={2} />
+          <ChevronDown
+            className="h-4 w-4"
+            strokeWidth={2}
+          />
         </a>
       </div>
     </section>
@@ -68,20 +74,26 @@ function Hero() {
 
 function Values() {
   return (
-    <section id="values" className="scroll-mt-8 bg-surface px-5 py-20 md:px-8 md:py-24">
+    <section
+      id="values"
+      className="scroll-mt-8 bg-surface px-5 py-20 md:px-8 md:py-24"
+    >
       <div className="mx-auto max-w-3xl text-center">
         <Eyebrow>Our values</Eyebrow>
         <h2 className="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">
           More than a school, a community
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted">
-          At École des Sciences de Gisenyi, we cultivate excellence, respect, innovation,
-          and engagement to build a better future.
+          At École des Sciences de Gisenyi, we cultivate excellence, respect,
+          innovation, and engagement to build a better future.
         </p>
       </div>
       <ul className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
         {values.map((value) => (
-          <li key={value.id} className="flex flex-col items-center px-4 text-center">
+          <li
+            key={value.id}
+            className="flex flex-col items-center px-4 text-center"
+          >
             <CircleIcon name={value.icon} />
             <h3 className="mt-6 font-sans text-lg font-semibold text-ink">
               {value.title}
@@ -96,22 +108,22 @@ function Values() {
   );
 }
 
-function Programs() {
+function Levels() {
   return (
     <section
       id="programs"
       className="scroll-mt-8 bg-gradient-to-b from-mint/80 to-background px-5 py-20 md:px-8 md:py-24"
     >
       <div className="mx-auto max-w-3xl text-center">
-        <Eyebrow>Our programs</Eyebrow>
+        <Eyebrow>Our levels</Eyebrow>
         <h2 className="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">
-          From preschool to the baccalaureate
+          O’Level and A Level
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted">
-          A complete path, adapted to every stage of school life.
+          Focused secondary education in science, mathematics, languages, and research.
         </p>
       </div>
-      <ul className="mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      <ul className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
         {programs.map((program) => (
           <li key={program.id}>
             <Link
@@ -127,7 +139,9 @@ function Programs() {
               <h3 className="mt-4 font-sans text-base font-semibold text-ink">
                 {program.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{program.summary}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                {program.summary}
+              </p>
             </Link>
           </li>
         ))}
@@ -145,9 +159,12 @@ function JoinCta() {
           Let’s give meaning to your future, together
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-muted md:text-base">
-          Discover our school, our programs, and our values. We are here to support you.
+          Discover our school, academic levels, and values. We are here to support you.
         </p>
-        <Button asChild className="mt-8">
+        <Button
+          asChild
+          className="mt-8"
+        >
           <Link to="/contact">
             Contact us
             <ArrowRight className="h-4 w-4" />

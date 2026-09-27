@@ -56,7 +56,11 @@ function NewsPage() {
                 params={{ slug: article.slug }}
                 className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface shadow-card transition-[transform,box-shadow] duration-150 hover:-translate-y-0.5 hover:shadow-soft"
               >
-                <img src={article.image} alt="" className="h-44 w-full object-cover" />
+                <img
+                  src={article.image}
+                  alt=""
+                  className="h-44 w-full object-cover"
+                />
                 <div className="flex flex-1 flex-col px-5 py-5">
                   <p className="text-xs font-semibold uppercase tracking-eyebrow text-accent">
                     {article.category}

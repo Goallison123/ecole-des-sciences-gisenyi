@@ -68,7 +68,9 @@ function ContactPage() {
             </p>
           </div>
           <div className="rounded-xl border border-border bg-surface p-6 shadow-card md:p-8">
-            <h2 className="font-display text-2xl font-semibold text-ink">Write to us</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink">
+              Write to us
+            </h2>
             <p className="mt-2 mb-6 text-sm text-muted">
               Tell us who you are and how we can help. Fields marked as required must be
               completed.

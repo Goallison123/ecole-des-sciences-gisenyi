@@ -1,8 +1,8 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Logo } from "@/components/brand/logo";
-import { navAll, navLeft, navRight } from "@/lib/site";
+import { navLeft, navMenus, navRight } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 function NavLink({
@@ -55,23 +55,67 @@ export function Header() {
 
   return (
     <header className="relative z-30 bg-transparent">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-10 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:py-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-5 md:px-8 lg:px-10 lg:py-6">
+        <Logo />
+
         <nav
-          className="hidden items-center justify-start gap-10 lg:flex"
+          className="hidden items-center gap-4 xl:gap-5 lg:flex"
           aria-label="Primary"
         >
           {navLeft.map((item) => (
-            <NavLink key={item.to} to={item.to} label={item.label} />
+            <NavLink
+              key={item.to}
+              to={item.to}
+              label={item.label}
+            />
           ))}
+          {navRight.map((item) => {
+            const menu =
+              item.label === "Academics"
+                ? navMenus.academics
+                : item.label === "Levels"
+                  ? navMenus.levels
+                  : item.label === "School life"
+                    ? navMenus.schoolLife
+                    : null;
+
+            if (!menu)
+              return (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  label={item.label}
+                />
+              );
+
+            return (
+              <div
+                key={item.to}
+                className="group relative"
+              >
+                <Link
+                  to={item.to}
+                  className="inline-flex items-center gap-1 px-1 py-2 text-sm text-foreground/75 transition-colors hover:text-primary"
+                >
+                  {item.label}
+                  <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
+                </Link>
+                <ul className="invisible absolute left-0 top-full z-50 min-w-52 translate-y-2 rounded-xl border border-border bg-surface p-2 opacity-0 shadow-soft transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                  {menu.map((entry) => (
+                    <li key={entry.to}>
+                      <Link
+                        to={entry.to}
+                        className="block rounded-lg px-3 py-2.5 text-sm text-foreground/80 transition-colors hover:bg-mint hover:text-primary"
+                      >
+                        {entry.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </nav>
-
-        <Logo />
-
-        <div className="hidden items-center justify-end gap-10 lg:flex">
-          {navRight.map((item) => (
-            <NavLink key={item.to} to={item.to} label={item.label} />
-          ))}
-        </div>
 
         <button
           type="button"
@@ -86,8 +130,11 @@ export function Header() {
 
       {open ? (
         <div className="absolute inset-x-0 top-full z-40 border-t border-border bg-surface px-5 py-4 shadow-soft lg:hidden">
-          <nav className="flex flex-col" aria-label="Mobile">
-            {navAll.map((item) => (
+          <nav
+            className="grid max-h-[calc(100dvh-6rem)] grid-cols-2 gap-x-5 gap-y-1 overflow-y-auto"
+            aria-label="Mobile"
+          >
+            {navLeft.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
@@ -95,6 +142,49 @@ export function Header() {
                 onClick={() => setOpen(false)}
               />
             ))}
+            {navRight.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                label={item.label}
+                onClick={() => setOpen(false)}
+              />
+            ))}
+            <div className="col-span-2 mt-2 border-t border-border pt-2">
+              <p className="px-1 py-2 text-xs font-semibold uppercase tracking-wider text-muted">
+                Academics
+              </p>
+              {navMenus.academics.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  label={item.label}
+                  onClick={() => setOpen(false)}
+                />
+              ))}
+              <p className="mt-2 px-1 py-2 text-xs font-semibold uppercase tracking-wider text-muted">
+                Levels
+              </p>
+              {navMenus.levels.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  label={item.label}
+                  onClick={() => setOpen(false)}
+                />
+              ))}
+              <p className="mt-2 px-1 py-2 text-xs font-semibold uppercase tracking-wider text-muted">
+                School life
+              </p>
+              {navMenus.schoolLife.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  label={item.label}
+                  onClick={() => setOpen(false)}
+                />
+              ))}
+            </div>
           </nav>
         </div>
       ) : null}

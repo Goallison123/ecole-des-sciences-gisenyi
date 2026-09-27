@@ -56,7 +56,8 @@ function tryGetRequest(): Request | null {
 function inboundContext(): InboundContext {
   const req = tryGetRequest();
   const xf = req?.headers.get("x-forwarded-host")?.split(",")[0]?.trim();
-  const publicHost = (xf || req?.headers.get("host") || "").split(":")[0]?.trim() || null;
+  const publicHost =
+    (xf || req?.headers.get("host") || "").split(":")[0]?.trim() || null;
   const headerToken = req?.headers.get(CONNECTOR_TOKEN_HEADER)?.trim() || null;
   const envToken =
     process.env.NODE_ENV === "production"

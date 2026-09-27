@@ -14,18 +14,33 @@ export function Footer() {
 
         <ul className="flex flex-1 flex-col gap-3 text-sm text-muted">
           <li className="flex items-center gap-3">
-            <MapPin className="h-4 w-4 text-accent" aria-hidden="true" />
+            <MapPin
+              className="h-4 w-4 text-accent"
+              aria-hidden="true"
+            />
             <span>{school.city}</span>
           </li>
           <li className="flex items-center gap-3">
-            <Phone className="h-4 w-4 text-accent" aria-hidden="true" />
-            <a href={school.phoneHref} className="hover:text-primary">
+            <Phone
+              className="h-4 w-4 text-accent"
+              aria-hidden="true"
+            />
+            <a
+              href={school.phoneHref}
+              className="hover:text-primary"
+            >
               {school.phone}
             </a>
           </li>
           <li className="flex items-center gap-3">
-            <Mail className="h-4 w-4 text-accent" aria-hidden="true" />
-            <a href={school.emailHref} className="hover:text-primary">
+            <Mail
+              className="h-4 w-4 text-accent"
+              aria-hidden="true"
+            />
+            <a
+              href={school.emailHref}
+              className="hover:text-primary"
+            >
               {school.email}
             </a>
           </li>
@@ -38,10 +53,16 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 px-5 py-5 text-xs text-muted md:flex-row md:items-center md:px-10">
           <p>{school.copyright}</p>
           <div className="flex items-center gap-6">
-            <Link to="/legal" className="hover:text-primary">
+            <Link
+              to="/legal"
+              className="hover:text-primary"
+            >
               Legal notice
             </Link>
-            <Link to="/privacy" className="hover:text-primary">
+            <Link
+              to="/privacy"
+              className="hover:text-primary"
+            >
               Privacy policy
             </Link>
           </div>

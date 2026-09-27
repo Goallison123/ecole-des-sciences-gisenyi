@@ -74,7 +74,9 @@ class LazyPGliteDriver implements Driver {
     const c = conn as PGliteConnection;
     if (settings.isolationLevel) {
       await c.executeQuery(
-        CompiledQuery.raw(`start transaction isolation level ${settings.isolationLevel}`),
+        CompiledQuery.raw(
+          `start transaction isolation level ${settings.isolationLevel}`,
+        ),
       );
     } else {
       await c.executeQuery(CompiledQuery.raw("begin"));
